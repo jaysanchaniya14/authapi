@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::group(['prefix' => 'v1'], function() {
+
 Route::post('auth',[AuthController::class,'register']);
 
 Route::post('login',[AuthController::class,'login']);
@@ -33,4 +33,3 @@ Route::get('alluser',[AuthController::class,'getalldata']);
 Route::get('role',[RoleController::class,'getallrole']);
 
 Route::put('update/{id}',[AuthController::class,'updateuser']);
-});

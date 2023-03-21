@@ -28,7 +28,7 @@ Route::post('login',[AuthController::class,'login']);
 
 Route::get('authuser/{id}',[AuthController::class,'getuserdata']);
 
-Route::get('alluser',[AuthController::class,'getalldata']);
+Route::get('alluser','AuthController@getalldata');
 
 Route::get('role',[RoleController::class,'getallrole']);
 

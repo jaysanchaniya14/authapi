@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('allusers',[AuthController::class,'getalldata']);
+
+Route::post('auth',[AuthController::class,'register']);
+
+Route::post('login',[AuthController::class,'login']);
